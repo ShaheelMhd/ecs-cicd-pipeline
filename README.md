@@ -39,32 +39,6 @@ This pipeline operates on top of an existing ECS Fargate infrastructure provisio
 
 GitHub Push → GitHub Actions → Docker Build → Amazon ECR → ECS Task Definition (New Revision) → ECS Service Rolling Deployment
 
-
----
-
-## Repository Structure
-
-ecs-cicd-pipeline/
-├── app/ # Sample application
-│ ├── Dockerfile
-│ ├── package.json
-│ └── server.js
-│
-├── ecs/ # ECS task definition template
-│ └── task-def.json
-│
-├── .github/
-│ └── workflows/
-│   └── deploy.yml # CI/CD pipeline definition
-│
-├── diagrams/
-│ └── architecture-diagram.png
-│
-├── .dockerignore
-├── .gitignore
-└── README.md
-
-
 ---
 
 ## CI/CD Pipeline (`deploy.yml`)
